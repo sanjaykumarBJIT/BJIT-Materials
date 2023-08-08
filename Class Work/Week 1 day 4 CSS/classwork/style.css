@@ -1,0 +1,136 @@
+/* official documentation for CSS: mdn */
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.class1{
+    /* color: blueviolet; */
+    border-width: 5px;
+    border-color: blue;
+    border-style: solid;
+    width: 50%;
+    padding: 10px 20px 10px 20px; /*First top, clockwise*/
+    /*padding: 10px 20px; First pixel is vertical*/
+    /* margin: 10px 20px 10px 20px; */
+    /*padding inside border, margin outside.*/
+    /*doing it in one line: shorthand, has to maintain sequece*/
+    /* border: 1px solid blue; */
+    /* padding-top: 30px; *
+
+    /*auto*/
+    width: 200px;
+    margin: 0 auto;
+
+    /*font style*/
+    font-style: italic;
+    font-weight: bold;
+
+    /*list*/
+    list-style-type: upper-alpha; /*converting ul to ol-ordered list*/
+   
+    /*Pseudo class parent */
+    transition: 1s background-color, 1s padding, 1s font-size;
+
+}
+
+/* #id1{
+    color: red;
+} */
+
+/* .class2{
+    color: rgb(190, 185, 196); important tag 
+} */
+
+/*PSEUDO CLASSES : HOVER FOCUS*/
+.class1:hover{
+    background-color: cornflowerblue;
+    padding: 25px 0px;
+    font-size: 40px;
+}
+
+.inputCls{
+    background-color: cornflowerblue;
+    border: none;
+    outline: none;
+    width:200px;
+}
+
+.inputCls:focus{
+    background-color: aqua;
+}
+
+.tbl{
+    border: 1px solid blue;
+    border-collapse: collapse;
+    width: 400px;
+}
+
+.tbl-head{
+    background-color: blueviolet;
+    font-style: italic
+}
+
+.tbl-cell{
+    background-color: antiquewhite;
+}
+
+.tbl-head, .tbl-cell{
+    border: 1 px solid black;
+}
+
+.form{
+   border: 1px solid blue; 
+   width: 50%;
+   margin: 0px auto;
+   background-image: linear-gradient(to right,yellow,green);
+}
+
+.form-row{
+    background-color: aliceblue;
+    display: flex;
+}
+
+.form-row-label{
+    /* display: flex; */
+    width: 30%;
+    text-align: end;
+    flex-direction: column; /*by default always set to row*/
+}
+
+.form-row-input{
+    /* display: flex; */
+    width: 70%;
+}
+
+.animation-container{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    animation: _animate_ 2s infinite;
+}
+
+@keyframes _animate_ {
+    0%{
+        border-radius: 0px;
+    }
+    50%{
+        border-radius: 50%;
+    }
+    100%{
+        border-radius: 0px;
+    }
+}
+
+/*key frames can manupulate any element*/
+
+
+
+
+
+
+
+
+
+

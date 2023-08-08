@@ -1,0 +1,122 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(250, 207, 154);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.class1{
+    background-color: #0e2533;
+    padding: auto;
+    height: 53px;
+}
+
+.li{
+    padding: 15px 20px;
+    display: hidden;
+    transition: 1s backgound-color, 1s padding, 1s font-size ;
+    
+}
+
+.li-a{
+    color: rgb(255, 245, 189);
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.li:hover{
+    background-color: rgb(84, 100, 129);
+    /* padding: 1px 1px; */
+    font-size: 19px;
+}
+
+.class2{
+    /* font-style: oblique; */
+    padding: 20px;
+    /* width: fit-content; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.text{
+    padding: 20px;
+}
+
+.text2{
+    padding-left: 30px;
+}
+
+.tbl{
+    padding: 10px;
+    margin-left: 10px;
+    border: 3px solid beige;
+    border-collapse: collapse;
+}
+
+.th{
+    padding: 10px;
+    text-align: center;
+}
+
+.tbdy{
+    text-align: center;
+    background-color: rgb(221, 255, 255);
+}
+
+.td{
+    padding: 10px;
+}
+
+.inputCls{
+    /* background-color: rgb(206, 223, 255); */
+    border-color: aquamarine;
+    border-radius: 25px;
+    outline: none;
+    width:300px;
+    height: 100px;
+}
+
+.inputCls:focus{
+    background-color: rgb(225, 255, 255);
+}
+
+.btn{
+    padding: 15px 10px; 
+    text-align: center;
+    border: 2px solid rgb(81, 126, 126);
+    margin: 20px 70px;
+    border-radius: 25px
+}
+
+.btn:hover{
+    background-color: aquamarine;
+    padding: 15px 15px;
+    font-size: 20px;
+}
+
+.class3{
+    background-color: #0e2533;
+    height: 86px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.text3{
+    font-style: italic; 
+    font-weight: bold;
+    color: blanchedalmond;
+    text-align: center;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    
+}
