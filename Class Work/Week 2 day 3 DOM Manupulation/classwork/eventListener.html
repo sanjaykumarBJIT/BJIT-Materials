@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event Listener</title>
+</head>
+<body>
+    <h1 id="ourHeader">Our First Dom Manipulation</h1>
+    <p id="ourParagraph" onmouseover="onMouserOverHandler()" onclick="onClickHandler()">This is a Paragraph. Maybe some description as well.</p>
+    <button id="clickButton" onclick="onClickHandler()">Click me!</button>
+    <script>
+        const ourHeaderDom = document.getElementById("ourHeader");
+        const clickButton = document.getElementById("clickButton");
+
+        // clickButton.addEventListener("click", () => {
+        //     console.log("Click is happening");
+        //     ourHeaderDom.style.color = "red";
+        // })
+
+        function onClickHandler(){
+            console.log("Click is Happening!!");
+            ourHeaderDom.style.color = "red";
+            ourHeaderDom.innerText = "The Color is red";
+        }
+
+        function onMouserOverHandler(){
+            console.log("Hover is Happening!!");
+            ourHeaderDom.style.color = "purple";
+            ourHeaderDom.innerText = "The Color is purple";
+        }
+    </script>
+</body>
+</html>

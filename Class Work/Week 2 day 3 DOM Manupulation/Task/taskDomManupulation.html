@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dom Manipulation Task</title>
+    <link rel="stylesheet" href="./taskDomCSS.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <h1 class="text1" style="margin-top: 0px; margin-bottom: 0px;">Amazon Lite</h1>
+        <ul class="ulist">
+            <li><a href="#" class="link">Games</a></li>
+            <li><a href="#" class="link">Categories</a></li>
+            <li><a href="#" class="link">Cart</a></li>
+            <li><a href="#" class="link">Sign in</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <div class="container">
+            <div class="border" id="product_holder">
+
+            </div>   
+        </div> 
+        
+    
+    </div>
+
+    <script>
+        async function productData(){
+            const response = await fetch("https://dummyjson.com/products/");
+            const jsonData = await response.json();
+            console.log(jsonData);
+        
+            
+
+            document.getElementById("product_holder").innerHTML = `
+            ${
+                jsonData.products.map((x, i) => {
+                    return(
+                        `
+                        <div class="product_div" onclick="onMouserOverHandler(${i})">
+                            <img src=${x.images[0]} alt=${x.title} class="product-img">
+                            
+                            <h5 class="Product-text" id="text">${x.description}</h5>
+                        </div>
+                        
+                        `
+                    )
+                    
+                }).join("")
+            }
+
+            `
+        }
+
+        function onMouserOverHandler(i){
+            const textID = document.querySelectorAll(".product_div")
+            textID[i].style.backgroundColor="rgb(20, 114, 143)";
+            console.log("Triggered");
+        }
+
+        productData();
+
+    </script>
+</body>
+</html>

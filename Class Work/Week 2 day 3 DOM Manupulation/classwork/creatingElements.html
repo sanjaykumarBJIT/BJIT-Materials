@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creating Elements</title>
+</head>
+<body>
+    <div id="ourDivDom">
+        <h1 id="ourHeader">Creating elements</h1>
+        <p id="ourParagraph">
+            We will create some p tags here... 
+        </p>
+
+        <div id="childDiv">
+        </div>
+    </div>
+    
+    <button id="clickButton" onclick="creatingElements()">Click me!</button>
+    <script>
+        const ourHeaderDom = document.getElementById("ourHeader");
+        const clickButton = document.getElementById("clickButton");
+        const ourDiv = document.getElementById("ourDivDom");
+        const childDiv = document.getElementById("childDiv");
+
+        function creatingElements(){
+            const para = document.createElement('p');
+            para.innerText = "This is newly created paragraph";
+            para.style.color = "Blue";
+            ourDiv.appendChild(para);
+
+
+
+            const header1 = document.createElement("h1");
+            header1.innerText = "GGEZ";
+            header1.style.color = "Cyan";
+            childDiv.appendChild(header1);
+        }
+
+    </script>
+</body>
+</html>

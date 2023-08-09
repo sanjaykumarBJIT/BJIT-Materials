@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Data Fetching</title>
+</head>
+<body>
+    <h1 id="ourHeader">Fetching Some Data</h1>
+    <p id="ourParagraph">
+        we will fetch some data and show it here: 
+    </p>
+    <button id="clickButton" onclick="getProductData()">Click me!</button>
+    <h1 id="productTitle"></h1>
+    <div id="image_holder"></div>
+    <!-- <img src="" alt="" id="imgID"> -->
+    <script>
+        const ourHeaderDom = document.getElementById("ourHeader");
+        const clickButton = document.getElementById("clickButton");
+
+        const ourProductTitle = document.getElementById("productTitle");
+        const img = document.getElementById("imgID");
+        async function getProductData(){
+            const response = await fetch("https://dummyjson.com/products/");
+            const jsonData = await response.json();
+
+            console.log(jsonData);
+            ourProductTitle.innerText = jsonData.products[2].title;
+            // img.src = jsonData.images[0];
+
+            document.getElementById("image_holder").innerHTML=`
+            ${
+                jsonData.products.map(x =>{
+                    return(
+                        `
+                        <img src=${x.images[0]} />
+
+                        <h4> ${x.description} </h4>`
+                    )
+                })
+            }      
+            `
+        }
+
+    </script>
+</body>
+</html>
