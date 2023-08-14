@@ -1,0 +1,121 @@
+//gte lte
+db.Products.find({
+	price:{
+	 $gte:1000,
+		$lte: 1050
+	}
+})
+
+// in
+db.Products.find({
+	price:{
+	 $in: [120, 1099, 140]
+	}
+})
+
+db.Products.find({
+	price:{
+	 $in: [120, 1099, 140]
+	},
+	stock: {
+	$in: [96]
+}
+})
+
+
+// or 
+db.Products.find({	
+$or: [
+  {price:1099}, {stock:89}
+]})
+
+db.Products.find({	
+$or: [
+  {price:1099}, {stock:89}
+]})
+
+
+// not
+db.Products.find({
+	price: {$not: {$gt:10}}
+}) 
+
+
+// regex
+db.Products.find({
+	title: {$regex: /Perfume$/}
+})  
+
+// where
+db.Products.find({
+	$where: function(){
+        return this.price === 140;
+    }
+})
+
+
+
+///////practice
+
+db.dummyJson.find({
+  $and: [
+    { rating: { $gt: 1 } },
+    { category: "laptops" },
+    {
+      $or: [
+        {
+          price: { $in: [1099, 1500] }, 
+					brand: {$regex:/Infinix$/}
+        },
+        {
+          $and: [
+            {price:{gte:1000}},
+					]
+        },
+        {
+		  $nor: [
+          {brand:"Apple"},
+          {category:"Desktop"}
+		]
+		}
+        
+      ]
+    }
+  ]
+})
+
+
+db.dummyJson.updateOne({
+  $and: [
+    { rating: { $gt: 1 } },
+    { category: "laptops" },
+    {
+      $or: [
+        {
+          price: { $in: [1099, 1500] }, 
+					brand: {$regex:/Infinix$/}
+        },
+        {
+          $and: [
+            {price:{gte:1000}},
+					]
+        },
+
+      ]
+    }
+  ]
+},{
+		$set:{
+			"images.0" : 'https://i.dummyjson.com/data/products/9/UpdatedImage1.jpg',
+			"images.1" : 'https://i.dummyjson.com/data/products/9/UpdatedImage2.jpg',
+	},
+		$unset:{
+			thumbnail:""
+		}
+
+}
+)
+
+
+
+db.dummyJson.find({id:9})
