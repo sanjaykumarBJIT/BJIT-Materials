@@ -1,0 +1,22 @@
+db.trainees.find({
+  $and: [
+    {
+			$or:[
+				{ salary: { $gte: 0 } },
+    		    { designation: "Trainee Software Engineer" },
+			]
+		},
+    {
+      $and: [
+        { "contacts.address.location": { $ne: "Uttara" } },
+        { "contacts.address.location": { $ne: "Dhanmondi" } }
+      ]
+    },
+    {
+		$nor: [
+            {refNo: "mern"},
+            {refNo: "sqa"}
+		]
+	}
+  ]
+},{"name.companyName":1,_id:0})
