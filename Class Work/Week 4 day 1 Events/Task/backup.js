@@ -26,12 +26,9 @@ emitter.on("backup", () => {
             `Deleted at: ${hour} ${amPm} : ${new Date().getMinutes()} : ${new Date().getSeconds()} ${amPm} .......`
           );
     }
-    else{
-        console.log(
-            `Updated at: ${hour} ${amPm} : ${new Date().getMinutes()} : ${new Date().getSeconds()} ${amPm} .......`
-          );
-    }
-    
+    console.log(
+      `Updated at: ${hour} ${amPm} : ${new Date().getMinutes()} : ${new Date().getSeconds()} ${amPm} .......`
+    );
     fs.writeFileSync(
       path.join(__dirname, "backup", "manga.json"),
       JSON.stringify(data)
@@ -41,4 +38,4 @@ emitter.on("backup", () => {
 
 setInterval(() => {
   emitter.emit("backup");
-}, 2000);
+}, 1000);

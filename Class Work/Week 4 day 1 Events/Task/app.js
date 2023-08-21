@@ -9,9 +9,9 @@ const main = async() =>{
         author: "Gorilla Sensei"
     };
 
-    await Product.updateID(9,updateParameter);
+    await Product.updateID(5,updateParameter);
     
-    await Product.deleteID(9);
+    await Product.deleteID(2);
 }
 
 main();
