@@ -1,0 +1,20 @@
+----------------------------------- Web Services -------------------------------
+
+
+### REST:
+REST (Representational State Transfer) is an API that defines a set of functions that programmers can use to send requests and 
+receive responses using the HTTP protocol methods such as GET and POST.
+
+
+
+
+### REST api vs RESTful api:
+"REST API" is a broader term that could refer to any API that uses the principles of REST, but it might not adhere to all the principles strictly.
+
+"RESTful API" specifically refers to an API that strictly follows the principles of REST.
+
+
+Headers provide additional information about the request or response and help in controlling the behavior of the communication between the client 
+and the server.
+
+
