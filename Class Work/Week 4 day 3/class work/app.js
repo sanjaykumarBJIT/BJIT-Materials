@@ -11,8 +11,7 @@ const server = http.createServer((req, res) => {
       body += buffer;
     });
     req.on("end", () => {
-      
-    //initial attribute check
+      //initial attribute check
       const requiredAttributes = ["name", "price", "stock", "author"];
       const missingAttributes = requiredAttributes.filter(
         (attr) => !(attr in JSON.parse(body))
@@ -32,24 +31,41 @@ const server = http.createServer((req, res) => {
             jsonData.push(newData);
 
             //log file
-            const updatetime = "Created at: Date: "+new Date().getDate()+"/"+new Date().getMonth()+"/"+new Date().getDay()+" Time: "+ new Date().getTime();
-            fs.appendFile("./data/logFile.txt", updatetime + '\n', "utf8", (err) => {
+            const updatetime =
+              "Created at: Date: " +
+              new Date().getDate() +
+              "/" +
+              new Date().getMonth() +
+              "/" +
+              new Date().getDay() +
+              " Time: " +
+              new Date().getTime();
+            fs.appendFile(
+              "./data/logFile.txt",
+              updatetime + "\n",
+              "utf8",
+              (err) => {
                 if (err) {
                   console.error("Error writing Update file:", err);
                 } else {
                   console.log("Update File written successfully.");
                 }
-              });
-
+              }
+            );
 
             //console.log(jsonData);
-            fs.writeFile("./data/manga.json", JSON.stringify(jsonData), "utf8", (err) => {
-              if (err) {
-                console.error("Error writing file:", err);
-              } else {
-                console.log("File written successfully.");
+            fs.writeFile(
+              "./data/manga.json",
+              JSON.stringify(jsonData),
+              "utf8",
+              (err) => {
+                if (err) {
+                  console.error("Error writing file:", err);
+                } else {
+                  console.log("File written successfully.");
+                }
               }
-            });
+            );
             res.write(JSON.stringify({ jsonData })); //response message
             return res.end();
           } else {
@@ -66,14 +82,12 @@ const server = http.createServer((req, res) => {
       }
       //
     });
-  }
-  else{
+  } else {
     res.writeHead(500, { "Content-type": "application/json" });
     res.write(JSON.stringify({ message: "URL or method error" }));
     return res.end();
   }
 });
-
 
 server.listen(8000, () => {
   console.log("Server is running on 8000..");
