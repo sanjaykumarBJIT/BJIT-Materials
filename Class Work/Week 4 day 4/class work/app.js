@@ -22,7 +22,6 @@ const server = http.createServer((req, res) => {
 
   req.on("end", async () => {
     const requestURL = req.url.split("?")[0];
-
     //------------------------------get all------------------------------------------
     if (requestURL === "/products/getAll" && req.method === "GET") {
       try {
@@ -77,7 +76,6 @@ const server = http.createServer((req, res) => {
         // return res.end();
       }
     }
-
     //------------------------------Create------------------------------------------
     else if (requestURL === "/products/create" && req.method === "POST") {
       try {
@@ -103,7 +101,6 @@ const server = http.createServer((req, res) => {
         // return res.end();
       }
     }
-
     //------------------------------delete by ID------------------------------------------
     else if (requestURL === "/products/deleteById" && req.method === "DELETE") {
       try {
@@ -130,7 +127,6 @@ const server = http.createServer((req, res) => {
         res.end(JSON.stringify(failure("Internal server error ")));
       }
     }
-
     //------------------------------Update By ID------------------------------------------
     else if (requestURL === "/products/updateById" && req.method === "PUT") {
       try {
@@ -156,8 +152,6 @@ const server = http.createServer((req, res) => {
         // return res.end();
       }
     } 
-
-
     //---------------------------------Day 5 task---------------------------
     else if (requestURL === "/products/getTotalValue" && req.method === "GET") {
       try {
@@ -181,7 +175,6 @@ const server = http.createServer((req, res) => {
         // return res.end();
       }
     }
-
     //------------------------------get Products By userID------------------------------------
     else if (requestURL === "/products/getProductsUsingUserID" && req.method === "GET") {
       try {
@@ -206,9 +199,7 @@ const server = http.createServer((req, res) => {
         // return res.end();
       }
     }
-
     //------------------------------Sorting By Price------------------------------------------
-
     else if (requestURL === "/products/sortingByPrice" && req.method === "GET") {
       try {
         const result = await Product.sortingByPrice(getQueryParams().sort);
@@ -232,7 +223,6 @@ const server = http.createServer((req, res) => {
         // return res.end();
       }
     }
-
     ////------------------------------getting favorite author by userID------------------------------------------
     else if (requestURL === "/products/gettingFavAuthByUserID" && req.method === "GET") {
       try {
@@ -257,7 +247,6 @@ const server = http.createServer((req, res) => {
         // return res.end();
       }
     }
-
     ////------------------------------getting Top average rated manga------------------------------------------
     else if (requestURL === "/products/getTopManga" && req.method === "GET") {
       try {
@@ -282,7 +271,6 @@ const server = http.createServer((req, res) => {
         // return res.end();
       }
     }
-     
     else {
       res.writeHead(500, { "Content-type": "application/json" });
       res.write(JSON.stringify({ message: "URL or method error" }));
@@ -290,7 +278,6 @@ const server = http.createServer((req, res) => {
     }
   });
 });
-
 server.listen(8000, () => {
   console.log("Server is running on 8000..");
 });

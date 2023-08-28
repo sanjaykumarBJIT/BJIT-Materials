@@ -146,7 +146,7 @@ const server = http.createServer((req, res) => {
         } else {
           res.writeHead(400, { "Content-Type": "application/json" });
           // console.log("Here error");
-          res.end(failure("Can not delete the data"));
+          res.end(failure("Can not update the data"));
           // return res.end();
         }
       } catch (error) {

@@ -1,0 +1,173 @@
+[
+    {
+        "id": 4,
+        "name": "Naruto, Vol. 4",
+        "price": 15.99,
+        "stock": 15,
+        "author": "Masashi Kishimoto",
+        "reviews": [
+            {
+                "userId": 1,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 2,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Bleach, Vol. 1",
+        "price": 16.99,
+        "stock": 50,
+        "author": "Tite Kubo",
+        "reviews": [
+            {
+                "userId": 2,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 3,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "One punch Mannnnnnnnnnnnnnnnnn",
+        "price": 11.99,
+        "stock": 44,
+        "author": "Murata Sensei",
+        "id": 6,
+        "reviews": [
+            {
+                "userId": 2,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 1,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Gintama",
+        "price": 166.99,
+        "stock": 44,
+        "author": "Hoshino Ai",
+        "id": 7,
+        "reviews": [
+            {
+                "userId": 1,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 2,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Gintama",
+        "price": 44.99,
+        "stock": 44,
+        "author": "Robindranath Tagore",
+        "id": 8,
+        "reviews": [
+            {
+                "userId": 3,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 1,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Gintama",
+        "price": 112.99,
+        "stock": 44,
+        "author": "Hoshino Ai",
+        "id": 9,
+        "reviews": [
+            {
+                "userId": 3,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 1,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Gintama",
+        "price": 118.99,
+        "stock": 44,
+        "author": "Hoshino Ai",
+        "id": 10,
+        "reviews": [
+            {
+                "userId": 3,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 1,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Gintama",
+        "price": 111.99,
+        "stock": 44,
+        "author": "Hoshino Ai",
+        "id": 11,
+        "reviews": [
+            {
+                "userId": 1,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 2,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Vinland Saga",
+        "price": 11.99,
+        "stock": 44,
+        "author": "Kazi Nazrul Islam",
+        "id": 12,
+        "reviews": [
+            {
+                "userId": 1,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 2,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    }
+]
