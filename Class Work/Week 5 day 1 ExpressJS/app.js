@@ -93,7 +93,7 @@ app.delete("/products/deleteById/:id", async (req, res) => {
 //--------------------------------update by ID---------------------------------------------
 app.put("/products/updateById/:id", async (req, res) => {
   try {
-    const result = await Product.getTotal();
+    const result = await Product.updateById();
     if (result.success) {
       console.log(result);
       return res.status(200).send(success("successfully updated data", result));
