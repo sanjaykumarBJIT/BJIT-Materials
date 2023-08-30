@@ -1,0 +1,191 @@
+[
+    {
+        "id": 4,
+        "name": "Naruto, Vol. 4",
+        "price": 15.99,
+        "stock": 15,
+        "releaseDate": 2012,
+        "publisher": "Kodansha",
+        "author": "Masashi Kishimoto",
+        "reviews": [
+            {
+                "userId": 1,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 2,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Bleach, Vol. 1",
+        "price": 16.99,
+        "stock": 50,
+        "releaseDate": 2011,
+        "publisher": "Funimation",
+        "author": "Tite Kubo",
+        "reviews": [
+            {
+                "userId": 2,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 3,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "One punch Mannnnnnnnnnnnnnnnnn",
+        "price": 11.99,
+        "stock": 44,
+        "releaseDate": 2010,
+        "publisher": "Kodansha",
+        "author": "Murata Sensei",
+        "id": 7,
+        "reviews": [
+            {
+                "userId": 1,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 2,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Gintama",
+        "price": 444.99,
+        "stock": 44,
+        "publisher": "Funimation",
+        "releaseDate": 2012,
+        "author": "Robindranath Tagore",
+        "id": 8,
+        "reviews": [
+            {
+                "userId": 3,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 1,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Gintama",
+        "price": 112.99,
+        "stock": 44,
+        "releaseDate": 2008,
+        "publisher": "Kodansha",
+        "author": "Hoshino Ai",
+        "id": 9,
+        "reviews": [
+            {
+                "userId": 3,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 1,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Gintama",
+        "price": 118.99,
+        "stock": 44,
+        "releaseDate": 2001,
+        "publisher": "Funimation",
+        "author": "Hoshino Ai",
+        "id": 10,
+        "reviews": [
+            {
+                "userId": 3,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 1,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Gintama",
+        "price": 111.99,
+        "stock": 44,
+        "releaseDate": 2012,
+        "publisher": "Funimation",
+        "author": "Hoshino Ai",
+        "id": 11,
+        "reviews": [
+            {
+                "userId": 1,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 2,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Vinland Saga",
+        "price": 11.99,
+        "stock": 44,
+        "releaseDate": 2018,
+        "publisher": "Kodansha",
+        "author": "Kazi Nazrul Islam",
+        "id": 12,
+        "reviews": [
+            {
+                "userId": 1,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 2,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    },
+    {
+        "name": "Vinland Saga",
+        "price": 11.99,
+        "stock": 44,
+        "releaseDate": 2021,
+        "publisher": "Funimation",
+        "author": "Jim bhai",
+        "id": 13,
+        "reviews": [
+            {
+                "userId": 1,
+                "rating": 4.5,
+                "comment": "Great volume!"
+            },
+            {
+                "userId": 2,
+                "rating": 4.8,
+                "comment": "Amazing artwork!"
+            }
+        ]
+    }
+]
