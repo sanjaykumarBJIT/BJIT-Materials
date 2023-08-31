@@ -1,6 +1,7 @@
 const { validationResult } = require("express-validator");
 const ProductModel = require("../model/Product");
 const { success, failure } = require("../util/common");
+const UserModel = require("../model/user")
 
 class Product {
   //--------------------------Get All----------------------
