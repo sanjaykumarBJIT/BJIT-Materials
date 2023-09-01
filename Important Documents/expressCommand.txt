@@ -4,3 +4,4 @@ npm i dotenv
 npm init
 npm i express-validator
 npm i mongoose
+npm i cors
