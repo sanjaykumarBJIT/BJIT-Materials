@@ -1,0 +1,113 @@
+  //revised version
+  async filterProducts_Version2(req, res) {
+    try {
+      const Validation = validationResult(req).array();
+      if (Validation.length > 0) {
+        return res.status(422).send(failure("Invalid input", Validation));
+      }
+  
+      let {
+        page,
+        limit,
+        sortOrder,
+        sortParams,
+        search,
+        price,
+        priceFill,
+        stock,
+        stockFill,
+        releaseDate,
+        releaseDateFill,
+        authorNames,
+      } = req.query;
+  
+      if (!page || !limit) {
+        page = 1;
+        limit = 3;
+      }
+  
+      if (page < 1 || limit <= 0) {
+        return res.status(422).send(failure("Invalid page or limit values"));
+      }
+  
+      const conditions = [];
+  
+      // Sorting condition
+      if (sortOrder && sortParams) {
+        if (["price", "stock", "name"].includes(sortParams)) {
+          const sort = {};
+          sort[sortParams] = sortOrder === "asc" ? 1 : -1;
+          conditions.push({ $sort: sort });
+        } else {
+          return res.status(400).send(failure("Invalid Input at sortParams"));
+        }
+      }
+  
+      // Stock condition
+      if (stock && stockFill) {
+        if (stockFill === "higher") {
+          conditions.push({ stock: { $gt: stock } });
+        } else if (stockFill === "lower") {
+          conditions.push({ stock: { $lt: stock } });
+        } else {
+          return res.status(400).send(failure("Invalid Input at stockFill"));
+        }
+      }
+  
+      // Price condition
+      if (price && priceFill) {
+        if (priceFill === "higher") {
+          conditions.push({ price: { $gt: price } });
+        } else if (priceFill === "lower") {
+          conditions.push({ price: { $lt: price } });
+        } else {
+          return res.status(400).send(failure("Invalid Input at priceFill"));
+        }
+      }
+  
+      // ReleaseDate condition
+      if (releaseDate && releaseDateFill) {
+        if (releaseDateFill === "higher") {
+          conditions.push({ releaseDate: { $gt: releaseDate } });
+        } else if (releaseDateFill === "lower") {
+          conditions.push({ releaseDate: { $lt: releaseDate } });
+        } else {
+          return res.status(400).send(failure("Invalid Input at releaseDateFill"));
+        }
+      }
+  
+      // Search condition
+      if (search) {
+        const searchRegex = new RegExp(search, "i");
+        conditions.push({
+          $or: [{ name: searchRegex }, { author: searchRegex }],
+        });
+      }
+  
+      // AuthorNames condition
+      if (authorNames) {
+        const authors = authorNames.split(",");
+        conditions.push({ author: { $in: authors } });
+      }
+  
+      const totalData = await ProductModel.countDocuments({ $and: conditions });
+      console.log(totalData);
+  
+      const skipAmount = (page - 1) * limit;
+  
+      const filteredProducts = await ProductModel.find({ $and: conditions })
+        .skip(skipAmount)
+        .limit(limit);
+  
+      if (filteredProducts.length > 0) {
+        return res
+          .status(200)
+          .send(success("Successfully received all products", filteredProducts));
+      }
+  
+      return res.status(200).send(success("No Products were found"));
+    } catch (error) {
+      console.error(error);
+      return res.status(500).send(failure("Internal server error"));
+    }
+  }
