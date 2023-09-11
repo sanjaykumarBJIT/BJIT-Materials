@@ -208,8 +208,8 @@ class Product {
         // console.log({reviewIndex});
         if (reviewIndex >= 0) {
           
-          totalStars = existingReview.reduce((acc, review) => acc + review.reviewStars, 0);
-          console("aaaaaaaaaa",totalStars);
+          totalStars = existingReview.reviews.reduce((acc, review) => acc + review.reviewStars, 0);
+          console.log("aaaaaaaaaa",totalStars);
           average = totalStars / existingReview.length;
 
           existingReview.reviews[reviewIndex].reviewMessage = reviewMessage;
