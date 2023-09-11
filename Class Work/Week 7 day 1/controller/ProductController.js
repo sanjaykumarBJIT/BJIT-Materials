@@ -202,23 +202,17 @@ class Product {
       } else {
         const reviewIndex = existingReview.reviews.findIndex(
           (item) => {
-            // console.log("jhjghkjg",item.userId,userId);
            return String(item.userId) === userId}
         );
-        // console.log({reviewIndex});
         if (reviewIndex >= 0) {
           
-          totalStars = existingReview.reduce((acc, review) => acc + review.reviewStars, 0);
-          console("aaaaaaaaaa",totalStars);
+          totalStars = existingReview.reviews.reduce((acc, review) => acc + review.reviewStars, 0);
+          console.log("aaaaaaaaaa",totalStars);
           average = totalStars / existingReview.length;
 
           existingReview.reviews[reviewIndex].reviewMessage = reviewMessage;
           existingReview.averageRating = average;
         } 
-
-        // console.log(reviewIndex);
-
-        // await existingReview.save();
         return res
           .status(200)
           .send(success("Successfully edited to Reviews",existingReview));
