@@ -1,0 +1,6 @@
+1. Micro Services 
+
+2. DATABASE SYNCRONIZATION AT 12.00.. shob database e same data thakbe.. vinno database thakbe jate database down holeo kaj chole.. 
+
+3. Prottekta module er jonno alada alada port
+

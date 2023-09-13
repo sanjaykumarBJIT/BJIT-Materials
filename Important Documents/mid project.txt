@@ -1,0 +1,8 @@
+BOOK STORE
+
+review rating 
+authenticate & authorization
+
+normal price but for discount - for certain time will activate
+
+transaction, cart, filtering and everything else

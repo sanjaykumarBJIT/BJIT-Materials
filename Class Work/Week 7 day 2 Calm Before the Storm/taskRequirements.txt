@@ -1,4 +1,0 @@
-implementation 
-efficiency
-presentation
-viva

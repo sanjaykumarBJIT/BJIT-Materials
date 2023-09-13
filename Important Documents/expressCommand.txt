@@ -7,3 +7,8 @@ npm i mongoose
 npm i cors
 npm i bcrypt
 npm i jsonwebtoken
+npm i ejs
+
+
+
+
