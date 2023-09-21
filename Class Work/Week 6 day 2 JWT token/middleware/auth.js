@@ -17,7 +17,7 @@ const isAuthorized = (req, res, next) => {
       // const data = validate.toObject();
       // console.log("Validateeeeeeeeeeeeeeeeeee:",validate.user.access);
       const decoded = jsonwebtoken.decode(jwtToken, (verify = true));
-      // console.log("Decoded:::::::::::::::::",decoded);
+      console.log("Decoded:::::::::::::::::",decoded);
       if (decoded.user.access === "admin") {
         next();
       } else {

@@ -4,3 +4,8 @@
 
 3. Prottekta module er jonno alada alada port
 
+
+Log management of server: kokhon kon api hit hocche eita log e thakbe, plus catch block e geleo thakbe.
+
+Database seeding: databse in case khali thakle backend theke kichu dummy data send korbo.
+

@@ -1,0 +1,6 @@
+npm install yarn --global
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+yarn create vite
+cd "package name"
+yarn
+yarn run dev

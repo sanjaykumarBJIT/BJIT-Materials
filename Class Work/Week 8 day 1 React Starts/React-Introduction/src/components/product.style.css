@@ -1,0 +1,21 @@
+.product-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: center;
+    background-color: #fff;
+    background: rgb(54, 54, 54);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(151, 150, 150, 0.1);
+    margin:60px;
+}
+
+.product-card img {
+    max-width: 100%;
+}
+
+.product-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px;
+}
