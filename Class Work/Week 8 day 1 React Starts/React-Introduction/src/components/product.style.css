@@ -10,7 +10,9 @@
 }
 
 .product-card img {
-    max-width: 100%;
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
 }
 
 .product-container{

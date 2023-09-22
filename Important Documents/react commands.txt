@@ -4,3 +4,4 @@ yarn create vite
 cd "package name"
 yarn
 yarn run dev
+yarn add sass
