@@ -1,0 +1,39 @@
+.ulist {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  li {
+    padding: 0 15px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:last-child {
+      border-right: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #6ba4ac; /* Change to your desired hover color */
+      }
+    }
+  }
+}
+
+.header-style {
+  height: 60px; /* Adjust the header height as needed */
+  display: flex;
+  align-items: center;
+
+  div {
+    padding: 10px 25px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+  }
+}

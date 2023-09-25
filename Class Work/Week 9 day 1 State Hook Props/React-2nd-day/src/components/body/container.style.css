@@ -1,0 +1,36 @@
+.container-main {
+    background-color: #efefef;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.banner {
+    background-image: url('https://miro.medium.com/v2/resize:fit:1200/1*6Jp3vJWe7VFlFHZ9WhSJng.jpeg'); /* Replace with your banner image URL */
+    background-size: cover;
+    background-position: center;
+    height: 350px; 
+    color: #fff; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+  
+  .banner-content {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease; 
+  }
+  
+ 
+  .banner:hover .banner-content {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
