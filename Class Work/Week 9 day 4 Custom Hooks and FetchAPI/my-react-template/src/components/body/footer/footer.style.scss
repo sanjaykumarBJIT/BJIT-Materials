@@ -1,0 +1,38 @@
+.footer-main {
+    background-color: #014b55;
+    color: rgb(241, 241, 241);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+        font-size: 1.5rem;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:hover {
+            color: #007bff;
+        }
+    }
+
+    .footer-section {
+        flex: 1;
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        margin-bottom: 5px;
+        display: block;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

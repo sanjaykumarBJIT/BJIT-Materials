@@ -1,0 +1,102 @@
+.nav-bar-main {
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    text-decoration: none;
+    font-weight: 100;
+    color: black;
+    font-style: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    /* border: 5px solid;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+
+.title {
+    padding-left: 20px;
+    display: flex;
+}
+
+.search-button {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-Input {
+    width: 300px;
+    border: 3px solid #014b55;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background-color: aliceblue;
+
+    &::placeholder {
+        color: #aaa;
+    }
+}
+
+.search-Input:focus {
+    color: #014b55;
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #014b55;
+    background: #014b55;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.ulist {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    li {
+        padding: 0 15px;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+        &:last-child {
+            border-right: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #6ba4ac;
+                /* Change to your desired hover color */
+            }
+        }
+    }
+}
+
+.header-style {
+    height: 60px;
+    /* Adjust the header height as needed */
+    display: flex;
+    align-items: center;
+
+    div {
+        padding: 10px 25px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+}

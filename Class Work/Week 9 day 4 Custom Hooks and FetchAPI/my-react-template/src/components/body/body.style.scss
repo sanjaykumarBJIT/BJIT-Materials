@@ -1,0 +1,183 @@
+$green: #2ecc71;
+$red: #e74c3c;
+$blue: #283f42;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$turquoise: #1abc9c;
+
+.addToCartButton {
+  border-color: $blue;
+  color: #fff;
+  height: auto;
+  width: auto;
+  box-shadow: 0 0 10px 10px $blue inset, 0 0 0 0 $blue;
+  border-radius: 5px;
+  margin: 12px 10px;
+  padding: 10px 20px;
+  flex-direction: column;
+  justify-content: center;
+  // transition: all 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 5px 0 $blue inset, 0 0 5px 2px $blue;
+  }
+}
+
+
+.header{
+    width: 100%;
+    color: black;
+}
+
+.container-main {
+    background-color: #efefef;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.temp{
+  background-color: black;
+}
+
+.banner {
+    background-image: url('https://miro.medium.com/v2/resize:fit:1200/1*6Jp3vJWe7VFlFHZ9WhSJng.jpeg'); /* Replace with your banner image URL */
+    background-size: cover;
+    background-position: center;
+    height: 350px; 
+    color: #fff; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+  
+  .banner-content {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease; 
+  }
+  
+ 
+  .banner:hover .banner-content {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    height: 400px;
+    color: black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    .image-container {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      overflow: hidden;
+    }
+  
+    .product-info {
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .product-description {
+      flex-grow: 1; /* Grow to occupy available space */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .product-price {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #007bff;
+    }
+  
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // bodyFormStyles.scss
+
+.form-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 1rem;
+    }
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.delete-button {
+  background-color: #ff0000; /* Red background color */
+  color: #fff; /* White text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for button content */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  margin-top: 12px;
+}
+
+/* Hover effect for delete button */
+.delete-button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+  
