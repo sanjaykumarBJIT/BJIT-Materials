@@ -5,3 +5,5 @@ cd "package name"
 yarn
 yarn run dev
 yarn add sass
+yarn add axios
+yarn add react-hook-form

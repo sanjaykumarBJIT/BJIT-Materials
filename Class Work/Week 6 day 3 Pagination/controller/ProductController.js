@@ -41,7 +41,7 @@ class Product {
 
       if (!page || !limit) {
         page = 1;
-        limit = 3;
+        limit = 10;
       }
 
       if (page < 1 && limit < 0) {

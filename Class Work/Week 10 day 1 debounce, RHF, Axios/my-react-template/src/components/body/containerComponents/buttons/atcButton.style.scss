@@ -1,0 +1,24 @@
+$green: #2ecc71;
+$red: #e74c3c;
+$blue: #283f42;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$turquoise: #1abc9c;
+
+.addToCartButton {
+  border-color: $blue;
+  color: #004261;
+  height: auto;
+  width: auto;
+  box-shadow: 0 0 5px 5px $blue inset, 0 0 0 0 $blue;
+  border-radius: 5px;
+  margin: 12px 10px;
+  padding: 10px 20px;
+  flex-direction: column;
+  justify-content: center;
+  // transition: all 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 5px 0 $blue inset, 0 0 5px 2px $blue;
+  }
+}
