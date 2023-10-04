@@ -1,0 +1,290 @@
+$green: #2ecc71;
+$red: #e74c3c;
+$blue: #283f42;
+$yellow: #f1c40f;
+$purple: #8e44ad;
+$turquoise: #1abc9c;
+
+.addToCartButton {
+  border-color: $blue;
+  color: #fff;
+  height: auto;
+  width: auto;
+  box-shadow: 0 0 10px 10px $blue inset, 0 0 0 0 $blue;
+  border-radius: 5px;
+  margin: 12px 10px;
+  padding: 10px 20px;
+  flex-direction: column;
+  justify-content: center;
+  // transition: all 150ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 5px 0 $blue inset, 0 0 5px 2px $blue;
+  }
+}
+
+
+.header{
+    width: 100%;
+    color: black;
+}
+
+.container-main {
+    background-color: #efefef;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.temp{
+  background-color: black;
+}
+
+.banner {
+    background-image: url('https://miro.medium.com/v2/resize:fit:1200/1*6Jp3vJWe7VFlFHZ9WhSJng.jpeg'); /* Replace with your banner image URL */
+    background-size: cover;
+    background-position: center;
+    height: 350px; 
+    color: #fff; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+  
+  .banner-content {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease; 
+  }
+  
+ 
+  .banner:hover .banner-content {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    height: 400px;
+    color: black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  
+    .image-container {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      overflow: hidden;
+    }
+  
+    .product-info {
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .product-description {
+      flex-grow: 1; /* Grow to occupy available space */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .product-price {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #007bff;
+    }
+  
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // bodyFormStyles.scss
+
+.form-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 1rem;
+    }
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.delete-button {
+  background-color: #ff0000; /* Red background color */
+  color: #fff; /* White text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for button content */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  margin-top: 12px;
+}
+
+/* Hover effect for delete button */
+.delete-button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+  
+.nav-bar-main {
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  text-decoration: none;
+  font-weight: 100;
+  color: black;
+  font-style: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  /* border: 5px solid;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+}
+
+.title {
+  padding-left: 20px;
+  display: flex;
+}
+
+.search-button {
+  display: flex;
+  flex-direction: row;  
+  
+  .temp-form{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.search-Input {
+  width: 300px;
+  border: 3px solid #014b55;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  background-color: aliceblue;
+
+  &::placeholder {
+      color: #aaa;
+  }
+}
+
+.search-Input:focus {
+  color: #014b55;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #014b55;
+  background: #014b55;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.ulist {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  li {
+      padding: 0 15px;
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+      &:last-child {
+          border-right: none;
+      }
+
+      a {
+          text-decoration: none;
+          color: black;
+          transition: color 0.3s ease;
+
+          &:hover {
+              color: #6ba4ac;
+              /* Change to your desired hover color */
+          }
+      }
+  }
+}
+
+.header-style {
+  height: 60px;
+  /* Adjust the header height as needed */
+  display: flex;
+  align-items: center;
+
+  div {
+      padding: 10px 25px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+  }
+}
